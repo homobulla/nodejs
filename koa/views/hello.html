@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello {{ name }}</title>
+</head>
+<body>
+    <h3>Fruits List</h3>
+    {% for ingredient, amount in food %}
+    Use {{ amount }} of {{ ingredient }}
+    {% endfor %}
+    <p>{{ fruits }}</p>
+    <p>Total: {{ count|hex }}</p>
+</body>
+</html>
