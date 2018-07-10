@@ -1,4 +1,5 @@
 const model = require("./model"),
+
   basicPath = "http://www.mzitu.com/page/";
 let start = 1,
   end = 10;
