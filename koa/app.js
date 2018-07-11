@@ -10,6 +10,4 @@ app.use(router.routes());
 app.on('error', (err, ctx) => {
 	console.error('server error', err, ctx);
 });
-app.listen(3000, function(req, res) {
-	console.log('app is running at port 3000');
-});
+module.exports = app.listen(3000);
