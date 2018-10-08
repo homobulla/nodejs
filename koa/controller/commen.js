@@ -23,6 +23,11 @@ function hasData(data) {
         return { code: 1, msg: '缺少errorMsg字段' }
     }
 }
+/**
+ * 返回头的定义
+ * @param  {obj}
+ * @return {null}
+ */
 function commen(ctx) {
     ctx.set('Access-Control-Allow-Origin', '*')
     ctx.set(
@@ -33,7 +38,12 @@ function commen(ctx) {
 }
 exports.message = async ctx => {
     commen(ctx)
-    ctx.body = res(hasData(ctx.request.body))
+    try {
+        let ret = await readFile('../koa/views/my.html', 'utf8')
+        ctx.body = ret
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 exports.index = async ctx => {
