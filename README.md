@@ -9,3 +9,7 @@ nodejs 学习
 -   爬虫： nodejs 的使用
 -   node-study: 个人博客系统
 -   node-mysql: node 连接 mysql 数据库增删改查
+
+### 链接
+
+[node in action](https://gsbhz.gitbooks.io/node-in-action/content/zh/cli/request.html)
