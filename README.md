@@ -19,4 +19,4 @@
 
 ### 链接
 
-[node in action](https://gsbhz.gitbooks.io/node-in-action/content/zh/cli/request.html)
+[node in action](https://gsbhz.gitbooks.io/node-in-action/content/zh/cli/request.html).
