@@ -14,3 +14,9 @@
 ### 链接
 
 [node in action](https://gsbhz.gitbooks.io/node-in-action/content/zh/cli/request.html)
+
+### 一些工具
+
+1.`commander.js`：获取命令行参数
+
+2.`colors`：让`console`具有颜色
