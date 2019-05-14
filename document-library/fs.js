@@ -62,3 +62,17 @@ writeStream.end(); // 写入完成
 writeStream.on("finish", function() {
     console.log("写入成功");
 });
+
+getExt = callback => {
+    fs.readFile("README.md", (err, data) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        callback(data);
+    });
+};
+
+getExt(result => {
+    console.log(result.toString());
+});
