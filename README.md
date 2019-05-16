@@ -15,6 +15,8 @@
 
 1.`commander.js`：获取命令行参数
 
+2. `live-server`: 启动一个本地具有热更新的服务
+
 2.`colors`：让`console`具有颜色
 
 ### 链接
