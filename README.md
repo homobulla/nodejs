@@ -10,6 +10,12 @@
 -   node-study: 个人博客系统
 -   node-mysql: node 连接 mysql 数据库增删改查
 -   bilibili 100 多集的视频课
+-   node 实战
+
+### nosw 实战
+
+-   [InstantMessaging 一个即时通讯](./node实战/InstantMessaging)
+-   [node 中的模块化以及模块机制](./node实战/chapter3/module)
 
 ### 一些工具
 

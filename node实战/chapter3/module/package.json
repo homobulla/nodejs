@@ -1,0 +1,15 @@
+{
+  "name": "module",
+  "version": "1.0.0",
+  "description": "`exports`本质上是对`module.exports`的全局引用，默认值为一个空的对象`{}`,所以 exports.myFunc 只 是\r module.exports.myFunc 的简写。我们使用`exports`都这么用:",
+  "main": "exports.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mime": "2.4.3"
+  }
+}
