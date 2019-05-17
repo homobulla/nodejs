@@ -16,6 +16,7 @@
 
 -   [InstantMessaging 一个即时通讯](./node实战/InstantMessaging)
 -   [node 中的模块化以及模块机制](./node实战/chapter3/module)
+-   [node 中异步编程](./node实战/chapter3/异步编程)
 
 ### 一些工具
 
