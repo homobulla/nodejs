@@ -16,7 +16,8 @@
 
 -   [InstantMessaging 一个即时通讯](./node实战/InstantMessaging)
 -   [node 中的模块化以及模块机制](./node实战/chapter3/module)
--   [node 中异步编程](./node实战/chapter3/异步编程)
+-   [node 中异步编程之事件发射器](./node实战/chapter3/异步编程/EventEmitter)
+-   [node 中异步编程之流程控制](./node实战/chapter3/异步编程/asynchronous)
 
 ### 一些工具
 

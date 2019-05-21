@@ -1,0 +1,16 @@
+{
+  "name": "asynchronous",
+  "version": "1.0.0",
+  "description": "> 让一组异步任务顺序执行的概念叫做*流程控制*，流程控制分为两类：串行和并行",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htmlparser": "1.7.7",
+    "request": "2.88.0"
+  }
+}
