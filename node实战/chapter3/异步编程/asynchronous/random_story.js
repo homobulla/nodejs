@@ -40,19 +40,22 @@ function downloadRSSFeed(feedUrl) {
 }
 
 //将源数据解析到一个条目数组中
-function parseRSSFeed(rss) {
-    let handler = new htmlparser.RssHandler();
-    let parser = new htmlparser.Parser(handler);
+function parserRSSFeed(rss) {
+    //任务4: 将预定源数据解析到一个条目数组中
+    var handler = new htmlparser.RssHandler();
+    var parser = new htmlparser.Parser(handler);
     parser.parseComplete(rss);
     if (!handler.dom.items.length) {
-        return next(new Error("No RSS items found."));
+        return next(new Error("No RSS items found"));
     }
-    let itme = handler.dom.items.shift();
-    console.log(item.title);
-    console.log(item.link);
+
+    //如果有数据, 显示第一个预定源条目的标题和URL
+    var item = handler.dom.items.shift();
+    console.log("title: " + item.title);
+    console.log("link: " + item.link);
 }
 
-let tasks = [checkForSSRFile, readRSSFile, downloadRSSFeed, parseRSSFeed];
+let tasks = [checkForSSRFile, readRSSFile, downloadRSSFeed, parserRSSFeed];
 function next(err, result) {
     if (err) throw err;
     let currentTask = tasks.shift();

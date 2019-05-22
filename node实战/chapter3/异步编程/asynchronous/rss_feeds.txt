@@ -1,4 +1,1 @@
-http://news.baidu.com/n?cmd=1&class=internet&tn=rss
-http://news.baidu.com/n?cmd=1&class=civilnews&tn=rss
-http://news.baidu.com/n?cmd=1&class=internews&tn=rss
-http://news.baidu.com/n?cmd=1&class=mil&tn=rss
+http://www.read.org.cn/feed
