@@ -15,9 +15,12 @@
 ### nosw 实战
 
 -   [InstantMessaging 一个即时通讯](./node实战/InstantMessaging)
--   [node 中的模块化以及模块机制](./node实战/chapter3/module)
--   [node 中异步编程之事件发射器](./node实战/chapter3/异步编程/EventEmitter)
--   [node 中异步编程之流程控制](./node实战/chapter3/异步编程/asynchronous)
+-   node 中的异步编程与流程控制
+    -   [node 中的模块化以及模块机制](./node实战/chapter3/module)
+    -   [node 中异步编程之事件发射器](./node实战/chapter3/异步编程/EventEmitter)
+    -   [node 中异步编程之流程控制](./node实战/chapter3/异步编程/asynchronous)
+-   [构建 node-web 程序](./node实战/chapter4)
+    -   [静态文件服务器](./node实战/chapter4/staticFileServer)
 
 ### 一些工具
 
