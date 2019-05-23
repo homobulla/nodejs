@@ -1,6 +1,6 @@
 {
     "name": "nodejs",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "-   包教不包会系列： nodejs\r -   koa 源码： 1000 行的源码阅读和实现\r -   koa study: koa 的使用学习\r -   koa: 自己的一个小 demo\r -   爬虫： nodejs 的使用\r -   node-study: 个人博客系统\r -   node-mysql: node 连接 mysql 数据库增删改查\r -   bilibili 100 多集的视频课\r -   node 实战",
     "main": "index.js",
     "dependencies": {
