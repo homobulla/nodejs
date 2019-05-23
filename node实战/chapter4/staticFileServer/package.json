@@ -1,0 +1,15 @@
+{
+  "name": "staticFileServer",
+  "version": "1.0.0",
+  "description": "每个静态文件服务器都有一个根目录，而在`node`中，变量`__dirname`会得到一个该文件所在目录的路径。通过该变量与`url.pathname`的配合可以得到任意文件的路径。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "1.2.1"
+  }
+}
