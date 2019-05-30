@@ -12,7 +12,7 @@
 -   bilibili 100 多集的视频课
 -   node 实战
 
-### nosw 实战
+### nodejs 实战
 
 -   [InstantMessaging 一个即时通讯](./node实战/InstantMessaging)
 -   chapter3 node 中的异步编程与流程控制
@@ -21,7 +21,8 @@
     -   [node 中异步编程之流程控制](./node实战/chapter3/异步编程/asynchronous)
 -   [chapter4 构建 node-web 程序](./node实战/chapter4)
     -   [静态文件服务器](./node实战/chapter4/staticFileServer)
--   [chapter5 存储 Node 程序中的数据](./node实战/chapter4)
+-   [chapter5 存储 Node 程序中的数据](./node实战/chapter5)
+-   [chapter6 Connect ](./node实战/chapter6)
 
 ### 一些工具
 
