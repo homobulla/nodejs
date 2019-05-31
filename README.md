@@ -23,6 +23,7 @@
     -   [静态文件服务器](./node实战/chapter4/staticFileServer)
 -   [chapter5 存储 Node 程序中的数据](./node实战/chapter5)
 -   [chapter6 Connect ](./node实战/chapter6)
+-   [chapter7 中间件 ](./node实战/chapter7)
 
 ### 一些工具
 
