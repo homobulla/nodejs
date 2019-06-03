@@ -23,4 +23,8 @@ http 是无状态的，[cookie](http://bubkoo.com/2014/04/21/http-cookies-explai
 
 接下来是 bodyParser：解析请求主体， limit 用来限制传送数据的尺寸， query 用来解析 get 请求参数。
 
-###
+### session 会话管理
+
+### 相关链接
+
+-   [彻底理解 cookie、session、token](https://mp.weixin.qq.com/s/ow6CryxVrkeU79GD857d1w)

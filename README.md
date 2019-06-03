@@ -24,6 +24,8 @@
 -   [chapter5 存储 Node 程序中的数据](./node实战/chapter5)
 -   [chapter6 Connect ](./node实战/chapter6)
 -   [chapter7 中间件 ](./node实战/chapter7)
+-   [chapter8 express ](./node实战/chapter8)
+-   [chapter9 深入 Express ](./node实战/chapter9)
 
 ### 一些工具
 
