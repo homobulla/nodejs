@@ -3,13 +3,13 @@
  */
 class Todo {
     constructor(todos) {
-        this.todos = todos;
+        this.todos = [];
     }
     add(item) {
         if (!item) {
             throw new Error("itme has no decalar");
         }
-        this.todos.add(item);
+        this.todos.push(item);
     }
     deleteAll() {
         this.todos = [];
