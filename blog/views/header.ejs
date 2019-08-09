@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>koa2-blog</title>
+	<link rel="icon" href="http://www.wclimb.site/images/avatar.png">
+	<link rel="stylesheet" href="/index.css">
+	<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		function fade(txt){
+			$('.message').text(txt)
+			$('.message').animate({
+				top:0
+			})
+			setTimeout(function(){
+				$('.message').animate({
+					top: '-100%'
+				})
+			},1500)
+		}
+		$(function(){
+			$('.signout').click(()=>{
+				$.ajax({
+					url: "/signout",
+					type: "GET",
+					cache: false,
+					dataType: 'json',
+					success: function (msg) {
+						if (msg) {
+							fade('登出成功')
+							setTimeout(()=>{
+								window.location.href = "/posts"
+							},1500)	
+						}
+					},
+					error: function () {
+						alert('异常');
+					}
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<header>
+		<div class="user_name">
+			<% if(session.user){ %>
+				 Hello,<%= session.user %>
+			<% } %>
+			<% if(!session.user){ %>
+				欢迎注册登录^_^
+			<% } %>
+		</div>
+		<div class="message">登录成功</div>
+		<div class="user_right">
+			<%  if(session.user){ %>
+				<div class="has_user">
+					<a target="__blank" href="https://github.com/wclimb/Koa2-blog">GitHub</a>
+					<% if(type == 'all'){ %>
+						<a class="active" href="/posts">全部文章</a>
+					<% }else{ %>
+						<a href="/posts">全部文章</a>
+					<% }%>
+					<% if(type == 'my'){ %>
+						<a class="active" href="/posts?author=<%= session.user %>">我的文章</a>
+					<% }else{ %>
+						<a href="/posts?author=<%= session.user %>">我的文章</a>
+					<% }%>
+					<% if(type == 'create'){ %>
+						<a class="active" href="/create">发表文章</a>
+					<% }else{ %>
+						<a href="/create">发表文章</a>
+					<% }%>
+					
+					<span class="signout">登出</span>
+				</div>
+			<% } %>
+			<% if(!session.user){ %>
+				<div class="none_user has_user">
+					<a target="__blank" href="https://github.com/wclimb/Koa2-blog">GitHub</a>
+					<% if(type == 'all'){ %>
+						<a class="active" href="/posts">全部文章</a>
+					<% }else{ %>
+						<a href="/posts">全部文章</a>
+					<% }%>
+					<% if(type == 'signup'){ %>
+						<a class="active" href="/signup">注册</a>
+					<% }else{ %>
+						<a href="/signup">注册</a>
+					<% }%>
+					<% if(type == 'signin'){ %>
+						<a class="active" href="/signin">登录</a>
+					<% }else{ %>
+						<a href="/signin">登录</a>
+					<% }%>
+				</div>
+			<% } %>
+		</div>
+	</header>
+	<script src="https://cdn.bootcss.com/socket.io/2.2.0/socket.io.js"></script>
+
+	<script>
+
+
+	function notifyMe(title, options,data) {
+		// 先检查浏览器是否支持
+		console.log('%c 这儿触发几次','background:#aaa;color:#bada55');
+		if (!window.Notification) {
+			console.log('浏览器不支持通知')
+		} else {
+			// 检查用户曾经是否同意接受通知
+			if (Notification.permission === 'granted') {
+				var notification = new Notification(title, options) // 显示通知
+				notification.onclick = function(options) { 
+					console.log(data.url,data)
+					window.open(data.url); // 不触发
+				 };
+			} else if (Notification.permission === 'default') {
+				// 用户还未选择，可以询问用户是否同意发送通知
+				Notification.requestPermission().then(permission => {
+					if (permission === 'granted') {
+						console.log('用户同意授权')
+						var notification = new Notification(title, options) // 显示通知
+						notification.onclick = function(options) { 
+							window.open(data.url);
+				 		};
+					} else if (permission === 'default') {
+						console.warn('用户关闭授权 未刷新页面之前 可以再次请求授权')
+					} else {
+						// denied
+						console.log('用户拒绝授权 不能显示通知')
+					}
+				})
+			} else {
+				// denied 用户拒绝
+				console.log('用户曾经拒绝显示通知')
+			}
+		}
+	}
+	
+	var socket = io('http://localhost:4000');
+		socket.on('comment',(data)=>{	
+			var userName = "<%- session.user %>";
+			console.log(userName,'userName',data);
+			if(data.person != userName ){
+				return;
+			}
+			var options = {
+				dir: 'auto', // 文字方向
+				body: `${data.user}评论了你的帖子`, // 通知主体
+				requireInteraction: false, // 不自动关闭通知
+				url: data.url
+				// 通知图标
+			}
+			window.location.reload();
+			notifyMe('通知', options,data);
+		})
+		
+		socket.on('disconnect', function(data){
+			// console.log(colors.green('disconnect'),data)
+		});
+	</script>
